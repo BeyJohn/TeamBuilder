@@ -1,0 +1,14 @@
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\bin\Debug\TeamBuilder.exe.config
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\bin\Debug\TeamBuilder.exe
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\bin\Debug\TeamBuilder.pdb
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder.csprojResolveAssemblyReference.cache
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\MainWindow.g.cs
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\App.g.cs
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder_MarkupCompile.cache
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder_MarkupCompile.lref
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\MainWindow.baml
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder.g.resources
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder.Properties.Resources.resources
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder.csproj.GenerateResource.Cache
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder.exe
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder.pdb
