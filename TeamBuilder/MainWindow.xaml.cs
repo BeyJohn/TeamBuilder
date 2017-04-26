@@ -1,6 +1,5 @@
 ﻿using System.Windows;
-using System.Media;
-using System;
+using System.Collections;
 
 namespace TeamBuilder
 {
@@ -8,43 +7,40 @@ namespace TeamBuilder
 	public partial class MainWindow : Window
 	{
 
-        private SoundPlayer spGood, spNormal, spBad;
+		private Window other;
+		private ArrayList teams;
 
 		public MainWindow()
 		{
 			InitializeComponent();
+			
+			other = new DisplayTeams(this);
+			teams = new ArrayList();
+		}
 
-            spGood = new SoundPlayer(Properties.Resources.bridge);
-            spNormal = new SoundPlayer(Properties.Resources.normal);
-            spBad = new SoundPlayer(Properties.Resources.sad);
-        }
+		private void DisplayTeamsButton(object sender, RoutedEventArgs e)
+		{
+			SwitchWindows();
+		}
 
-        private void TestSoundsButton(object sender, RoutedEventArgs e)
-        {
-            PlaySound();
-        }
+		private void SwitchWindows()
+		{
+			this.Close();
+			other.Show();
+		}
 
-        private void PlaySound()
-        {
-            switch(new Random().Next(10))
-            {
-                case 0:
-                    spGood.Play();
-                    break;
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                    spNormal.Play();
-                    break;
-                case 5:
-                case 6:
-                case 7:
-                case 8:
-                case 9:
-                    spBad.Play();
-                    break;
-            }
-        }
-    }
+		private void AddStudent(object sender, RoutedEventArgs e)
+		{
+			if(tbNewStudent.Text != "" && !cbStudents.Items.Contains(tbNewStudent.Text))
+			{
+				cbStudents.Items.Add(tbNewStudent.Text);
+			}
+		}
+
+		private void RemoveStudent(object sender, RoutedEventArgs e)
+		{
+			cbStudents.Items.Remove(cbStudents.Text);
+		}
+
+	}
 }

@@ -12,3 +12,5 @@ C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder
 C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder.csproj.GenerateResource.Cache
 C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder.exe
 C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\TeamBuilder.pdb
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\DisplayTeams.g.cs
+C:\Users\Beyjo\Desktop\C# Projects\TeamBuilder\TeamBuilder\obj\Debug\DisplayTeams.baml
