@@ -11,8 +11,11 @@
         <Button Content="Add Student" HorizontalAlignment="Left" Height="30" Margin="375,150,0,0" VerticalAlignment="Top" Width="125" Click="AddStudent"/>
         <Button Content="Remove Student" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="375,200,0,0" Height="30" Click="RemoveStudent"/>
         <ComboBox x:Name="cbStudents" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="225,200,0,0" Height="30"/>
-        <TextBox x:Name="tbNewStudent" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="125" Margin="225,150,0,0" TextChanged="tbNewStudent_TextChanged"/>
+        <TextBox x:Name="tbNewStudent" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="125" Margin="225,150,0,0"/>
         <Button Content="Create Teams" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="225,100,0,0" Height="30" Click="CreateTeams"/>
+        <Button Content="Save Names" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="225,315,0,0" Height="30" Click="SaveNames"/>
+        <Button Content="Load Names" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="375,315,0,0" Height="30" Click="LoadNames"/>
+        <TextBox x:Name="tbFileName" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" Margin="75,315,0,0"/>
 
     </Grid>
 </Window>
