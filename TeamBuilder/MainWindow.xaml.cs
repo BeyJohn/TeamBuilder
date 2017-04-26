@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using System.Collections;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Windows;
 
 namespace TeamBuilder
 {
@@ -10,14 +10,14 @@ namespace TeamBuilder
 	{
 
 		private Window other;
-		private ArrayList teams;
+		private List<string> teams;
 
 		public MainWindow()
 		{
 			InitializeComponent();
 
-			other = new DisplayTeams(this);
-			teams = new ArrayList();
+			teams = new List<string>();
+			other = new DisplayTeams(this, teams);
 		}
 
 		private void DisplayTeamsButton(object sender, RoutedEventArgs e)
@@ -27,21 +27,22 @@ namespace TeamBuilder
 
 		private void SwitchWindows()
 		{
-			this.Close();
+			this.Hide();
 			other.Show();
 		}
 
-		private void AddStudent(object sender, RoutedEventArgs e)
+		private void AddName(object sender, RoutedEventArgs e)
 		{
-			if (tbNewStudent.Text != "" && !cbStudents.Items.Contains(tbNewStudent.Text))
+			if (tbNewName.Text != "" && !cbNames.Items.Contains(tbNewName.Text))
 			{
-				cbStudents.Items.Add(tbNewStudent.Text);
+				cbNames.Items.Add(tbNewName.Text);
+				tbNewName.Text = "";
 			}
 		}
 
-		private void RemoveStudent(object sender, RoutedEventArgs e)
+		private void RemoveName(object sender, RoutedEventArgs e)
 		{
-			cbStudents.Items.Remove(cbStudents.Text);
+			cbNames.Items.Remove(cbNames.Text);
 		}
 
 		private void LoadNames(object sender, RoutedEventArgs e)
@@ -49,18 +50,18 @@ namespace TeamBuilder
 			if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + tbFileName.Text + ".dat"))
 			{
 				BinaryReader br = new BinaryReader(new FileStream(AppDomain.CurrentDomain.BaseDirectory + tbFileName.Text + ".dat", FileMode.Open));
-				cbStudents.Items.Clear();
+				cbNames.Items.Clear();
 
 				try
 				{
 					string val = br.ReadString();
-					while(val != null)
+					while (val != null)
 					{
-						cbStudents.Items.Add(val);
+						cbNames.Items.Add(val);
 						val = br.ReadString();
 					}
 				}
-				catch(Exception) {}
+				catch (Exception) { }
 				br.Close();
 			}
 			else
@@ -73,7 +74,7 @@ namespace TeamBuilder
 		{
 			BinaryWriter bw = new BinaryWriter(new FileStream(AppDomain.CurrentDomain.BaseDirectory + tbFileName.Text + ".dat", FileMode.Create));
 
-			foreach (string h in cbStudents.Items)
+			foreach (string h in cbNames.Items)
 			{
 				bw.Write(h);
 			}
@@ -81,9 +82,32 @@ namespace TeamBuilder
 			bw.Close();
 		}
 
+		//TODO
 		private void CreateTeams(object sender, RoutedEventArgs e)
 		{
+			teams.Clear();
+			Random r = new Random();
+			List<string> names = new List<string>();
+			foreach (string h in cbNames.Items)
+			{
+				names.Add(h);
+			}
+			while(names.Count >= 3)
+			{
+				int i = r.Next(names.Count);
+				string f = names[i];
+				names.RemoveAt(i);
 
+				i = r.Next(names.Count);
+				f += "," + names[i];
+				names.RemoveAt(i);
+
+				i = r.Next(names.Count);
+				f += "," + names[i];
+				names.RemoveAt(i);
+
+				teams.Add(f);
+			}
 		}
 
 		protected override void OnClosed(EventArgs e)

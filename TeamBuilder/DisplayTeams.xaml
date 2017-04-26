@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="DisplayTeams" Height="400" Width="600" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Button Content="Next Team" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="225,180,0,0" Height="40" Click="NextTeam" />
+        <Label x:Name="lSecond" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,180,0,0" Height="40" Width="125" />
+        <Label x:Name="lFirst" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225,115,0,0" Height="40" Width="125" />
+        <Label x:Name="lThird" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="375,180,0,0" Height="40" Width="125" />
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="375,240,0,0" Height="40" Click="Back" />
+
     </Grid>
 </Window>

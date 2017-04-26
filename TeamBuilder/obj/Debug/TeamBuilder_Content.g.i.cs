@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sad.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("community.ico")]
 
 
